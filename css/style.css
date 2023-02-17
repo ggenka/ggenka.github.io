@@ -1,0 +1,179 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #007280;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.content {
+  max-width: 500px;
+  padding: 30px;
+  margin: 0 auto;
+}
+/* .content_2d {
+} */
+.content_block {
+  margin-bottom: 50px;
+}
+.content_2d .content_block div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 200px;
+  transition: all 0.7s ease 0s;
+}
+.content_translate {
+  background-color: #e4a203;
+}
+.content_translate:hover{
+  /* transform: translateY(30%); */
+  /* transform: translateX(50%); */
+  transform: translate(50px,50px);
+}
+.content_scale {
+  background-color: #e4a203;
+  transform: scale(1,1);
+}
+.content_scale:hover{
+  transform: scale(-1,-1);
+}
+.content_rotate{
+  background-color: #e4a203;
+  transform: rotate(0deg);
+}
+.content_rotate:hover{
+  transform: rotate(90deg);
+}
+.content_skew{
+  background-color: #e4a203;
+  transform: skew(0deg,0deg);
+}
+.content_skew:hover{
+  transform: skew(10deg);
+}
+.content_transform-origin{
+  background-color: #e4a203;
+  transform-origin: 0 0;
+  transform: rotate(0deg);
+}
+.content_transform-origin:hover{
+  transform: rotate(-10deg);
+}
+
+/* 
+  matrix
+  multi
+*/
+
+
+
+
+
+
+
+
+
+.content_3d .content_wrapper3d {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  perspective-origin: center;
+  perspective: 400px;
+}
+.content_3d .content_wrapper3d div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 200px;
+  transition: all 0.7s ease 0s;
+  background-color: #e4a203;
+}
+.content_perspective {
+  
+}
+.content_perspective:hover {
+  transform: rotateY(50deg);
+}
+.content_translate3d {
+  transform: translate3D(0px, 0px, 0px);
+}
+.content_translate3d:hover {
+  transform: translate3D(20px, 25px, 50px);
+}
+.content_scale3d {
+  transform: scale3D(1, 1, 1);
+}
+.content_scale3d:hover {
+  transform: scale3D(2, 2, 5);
+}
+.content_rotate3d {
+  transform: rotate3D(1, 1, 1, 0deg);
+}
+.content_rotate3d:hover {
+  transform: rotate3D(2, 5, 10, 45deg);
+}
+
+.content_transform-style-wrapper {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  perspective:400px;
+  transform-style: preserve-3d;
+}
+.content_transform-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 200px;
+  transition: all 0.7s ease 0s;
+  background-color: #e4a203;
+  transform: rotateX(0deg);
+}
+.content_transform-style:hover{
+  transform: rotateX(50deg);
+}
+.flip_body {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: all 0.7s ease 0s;
+  transform-style: preserve-3d;
+}
+.flip_front, .flip_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flip_front{
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: black;
+  backface-visibility: hidden;
+}
+.flip_back {
+  transform: rotateY(-180deg);
+  background-color: chartreuse;
+}
+.flip:hover .flip_body{
+  transform: rotateY(-180deg);
+}
+
